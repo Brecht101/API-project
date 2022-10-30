@@ -41,8 +41,7 @@ users = [user_brecht]
 
 
 @app.get("/user")
-def get_user(id: int = Query(gt=-1,
-                             description="This parameter needs the private ID of an account to show more sensitive data.")):
+def get_user(id: int):
     if id < len(users):
         user = users[id]
         return user
