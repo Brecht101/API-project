@@ -1,6 +1,6 @@
 # API voor users met passwoorden opgeslagen in db + hashing?
 
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Path
 from pydantic import BaseModel
 from datetime import datetime
 
@@ -41,8 +41,9 @@ users = [user_brecht]
 
 
 @app.get("/user")
-def get_user(id: int):
-    if id < len(users):
+def get_user(id: int = Query(default=None,gt=-1,
+                             description="This parameter needs the private ID of an account to show more sensitive data.")):
+    if id is not None and id < len(users):
         user = users[id]
         return user
     else:
