@@ -4,8 +4,7 @@ from fastapi import FastAPI, Query, Path
 from pydantic import BaseModel
 from datetime import datetime
 
-app = FastAPI()
-
+app = FastAPI(title="Brecht Voets 2CCS01's API🔥",description="Welcome to my cool user API, where I made a replica of a real website login page that stores data in a database, hashed ofcourse!")
 
 class db_User(BaseModel):
     first_name: str
