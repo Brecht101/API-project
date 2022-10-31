@@ -1,6 +1,21 @@
 version: "3.9"
+networks:
+  db: {}
 services:
- randomizer-service:
-  image: brecht404/python-api
+ api:
+   image: brecht404/python-api
+  container_name: api
   ports:
     - "8000:8000"
+  networks:
+    - db
+
+ database:
+   image: mysql
+   container_name: database
+   environment:
+     MYSQL_ROOT_PASSWORD: test
+   networks:
+     - db
+
+
