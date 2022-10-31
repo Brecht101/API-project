@@ -15,6 +15,7 @@ services:
    container_name: database
    environment:
      MYSQL_ROOT_PASSWORD: test
+     MYSQL_DATABASE: users
    networks:
      - db
 

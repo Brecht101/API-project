@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 # SQLAlchemy specific code, as with any other app
-DATABASE_URL = "sqlite:///./test.db"
+DATABASE_URL = "mysql://root:test@db/users"
 # DATABASE_URL = "postgresql://user:password@postgresserver/db"
 
 database = databases.Database(DATABASE_URL)
