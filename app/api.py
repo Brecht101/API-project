@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 mydb = mysql.connector.connect(
-  host="localhost",
+  host="database",
   user="root",
   password="passW1$!",
   database='users'
