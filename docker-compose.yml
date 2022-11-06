@@ -14,7 +14,9 @@ services:
  database:
    image: mysql
    environment:
-     MYSQL_ROOT_PASSWORD: passW1$!
+     MYSQL_ROOT_PASSWORD: passW1!
+     MYSQL_USER: brecht
+     MYSQL_PASSWORD: pass
      MYSQL_DATABASE: users
    networks:
      - db
