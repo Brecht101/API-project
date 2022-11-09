@@ -14,8 +14,8 @@ from pydantic import BaseModel
 class User(BaseModel):
     first_name: str
     last_name: str
-    registration_date: datetime
-    id: int
+    registration_date: datetime | None = None
+    id: int | None = None
 
 class UserCreate(User):
-    registration_date: datetime | None = None  # User zou dit nu nog kunnen invullen, zou niet mogen
+    password: str
