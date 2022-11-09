@@ -23,6 +23,3 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id: int | None = None
-
-    class Config:
-        orm_mode = True
