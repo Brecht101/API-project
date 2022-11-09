@@ -11,5 +11,5 @@ class User(Base):
     first_name = Column(String)
     last_name = Column(String)
     password = Column(String)
-    registration_date = Column(datetime)
+    registration_date = Column(String) #datetime?
     id = Column(Integer, primary_key=True, index=True)
