@@ -34,7 +34,7 @@ def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return users
 
 
-@app.get("/users", response_model=schemas.User)
+@app.get("/user", response_model=schemas.User)
 def read_user(id: int, db: Session = Depends(get_db)):
     db_user = crud.get_user(db, user_id=id)
     if db_user is None:
