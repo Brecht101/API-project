@@ -22,7 +22,7 @@ def get_db():
         db.close()
 
 
-@app.post("/users/create", response_model=schemas.UserBase)
+@app.post("/users/create") #, response_model=schemas.UserBase)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     user.registration_date = datetime.datetime.now()
     return crud.create_user(db=db, user=user)
