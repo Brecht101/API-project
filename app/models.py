@@ -8,8 +8,8 @@ from database import Base
 class User(Base):
     __tablename__ = "data"
 
-    first_name = Column(String)
-    last_name = Column(String)
-    password = Column(String)
+    first_name = Column(String(50))
+    last_name = Column(String(50))
+    password = Column(String(50))
     registration_date = Column(DateTime) #datetime?
     id = Column(Integer, primary_key=True, index=True)
