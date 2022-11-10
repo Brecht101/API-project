@@ -1,4 +1,4 @@
-FROM python:3.10.0-bullseye
+FROM python:3.10.0
 WORKDIR /code
 EXPOSE 8000
 COPY requirements.txt /code/requirements.txt
