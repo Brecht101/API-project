@@ -2,7 +2,7 @@ version: "3.9"
 networks:
   db: {}
 services:
- randomizer-service:
+ api:
   image: brecht404/python-api
   ports:
     - "8000:8000"
