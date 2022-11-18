@@ -11,10 +11,10 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str
+    registration_date: datetime | None = None
 
 class User(UserBase):
-    registration_date: datetime | None = None
-    id: int | None = None
+    id: int
 
     class Config:
         orm_mode = True
