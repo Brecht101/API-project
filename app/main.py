@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="🔥Brecht Voets 2CCS01's API🔥",description="Welcome to my cool user API, where I made a replica of a real website login page that stores data in a database!")
+app = FastAPI(title="🔥Brecht Voets 2CCS01's API🔥",description="Welcome to my cool user API, where I made a replica of what could become a login page that stores data in a database!")
 
 origins = [
     "http://localhost:8000",

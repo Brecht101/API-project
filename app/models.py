@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from sqlalchemy import Column, Integer, String, DateTime
 
 from database import Base
@@ -11,5 +9,5 @@ class User(Base):
     first_name = Column(String(50))
     last_name = Column(String(50))
     password = Column(String(50))
-    registration_date = Column(DateTime) #datetime?
+    registration_date = Column(DateTime)
     id = Column(Integer, primary_key=True, index=True)
