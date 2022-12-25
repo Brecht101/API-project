@@ -1,14 +1,17 @@
 import datetime
-
 from fastapi import Depends, FastAPI, HTTPException, Query
 from sqlalchemy.orm import Session
-
 import crud
 import models
 import schemas
 from database import SessionLocal, engine
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
+if not os.path.exists('.\sqlitedb'):
+    os.makedirs('.\sqlitedb')
+
+#"sqlite:///./sqlitedb/sqlitedata.db"
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="🔥Brecht Voets 2CCS01's API🔥",description="Welcome to my cool user API, where I made a replica of what could become a login page that stores data in a database!")
